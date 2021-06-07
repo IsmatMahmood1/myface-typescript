@@ -6,13 +6,23 @@
 <ol>
     <% results.forEach(function(post) {%>
         <li>
-            <%= post.message %>
+            <h2><%= post.message%></h2> 
+            <img src="<%= post.imageUrl%>" alt="<%=post.message%>">
+            <p>Posted by: <%=post.postedBy.name%> 
+            Created on: <%=post.createdAt%></p>           
         </li>
     <% }); %>
 </ol>
 <form action="/posts/10/like" method="POST">
     <input type="submit"/>
 </form>
+<%if (next) { %>
+    <a href="<%= next %>">Next</a>
+<% } %>
+<%if (previous) { %>
+    <a href="<%= previous %>">Previous</a>
+<% } %>
+
 </body>
 <%- include('_footer') -%>
 </html>

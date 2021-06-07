@@ -5,6 +5,7 @@ import {getByPostInteraction, getUser} from "../repos/userRepo";
 import {Post} from "../models/database/post";
 import {CreatePostRequest} from "../models/api/createPostRequest";
 import {createInteraction} from "../repos/interactionRepo";
+import moment from "moment";
 
 export async function getPageOfPosts(page: number, pageSize: number): Promise<Page<PostModel>> {
     const posts = await postRepo.getPosts(page, pageSize);
@@ -38,12 +39,13 @@ export async function dislikePost(userId: number, postId: number): Promise<void>
     return createInteraction(userId, postId, "DISLIKE");
 }
 
-async function toPostModel(post: Post): Promise<PostModel> {
+
+export async function toPostModel(post: Post): Promise<PostModel> {
     return {
         id: post.id,
         message: post.message,
         imageUrl: post.imageUrl,
-        createdAt: post.createdAt,
+        createdAt: moment(post.createdAt).format('MMMM Do YYYY'),
         postedBy: await getUser(post.userId),
         likedBy: await getByPostInteraction(post.id, 'LIKE', 1, 10),
         dislikedBy: await getByPostInteraction(post.id, 'DISLIKE', 1, 10),

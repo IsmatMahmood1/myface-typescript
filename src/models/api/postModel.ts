@@ -11,8 +11,9 @@ export interface PostModel {
     id: number;
     message: string;
     imageUrl: string;
-    createdAt: moment.Moment;
+    createdAt: string;
     postedBy: PostUserModel;
     likedBy: PostUserModel[];
     dislikedBy: PostUserModel[];
 }
+//moment().format('MMMM Do YYYY');
