@@ -1,0 +1,112 @@
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 2 5 auto 3;
+    justify-content: center;
+    width: 100%;
+    background-color: #f6f6f6;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+header {
+    grid-row-start: 1;
+    grid-row-end: 2; 
+    padding-left: 5px;
+}
+.like-container{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    width: 100px;
+    justify-content: center;
+}
+
+.like-button {
+    grid-row: 1;
+    grid-column: 2; 
+}
+
+.dislike-button {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.like-counter {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.dislike-counter {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+
+.footer {
+    padding: 1% 0% 0% 5%;
+    grid-row-start: 4;
+    grid-row-end: 5; 
+}
+
+h1 {
+    grid-row-start: 2;
+    grid-row-end: 3; 
+    text-align: center;
+    color: darkblue;
+}
+
+h2 {
+ 
+    text-align: center;
+    font-size: small;
+}
+
+ol {
+    grid-row-start: 3;
+    grid-row-end: 4; 
+    display: flex;
+    flex-wrap: wrap;
+    color:darkcyan;
+    margin: 10px;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+}
+
+li {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    width: 150px;
+    margin: 10px;
+    position: relative;
+    justify-content: center;
+    background-color: #dbe9e9;
+}
+
+p {
+    font-size: 10px;
+}
+
+img {
+
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.button {
+    background-color: #469594;
+    color: white;
+    border: solid 2px #15403f;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    padding: 4px;
+}
+
+.button:hover {
+    background-color: #dbe9e9;
+    color: #15403f;
+}
