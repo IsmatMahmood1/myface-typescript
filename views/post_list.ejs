@@ -1,13 +1,13 @@
 <html lang="en-gb">
 <%- include('_head') -%>
-<body>
-<%- include('_header') -%>
+<body class="post-list">
+    <div class='header-post-list'><%- include('_header') -%></div>
 <h1>Posts</h1>
 <ol>
     <% results.forEach(function(post) {%>
         <li>
             <h2><%= post.message%></h2> 
-            <img src="<%= post.imageUrl%>" alt="<%=post.message%>">
+            <img class='list-image' src="<%= post.imageUrl%>" alt="<%=post.message%>">
             <p>Posted by: <%=post.postedBy.name%></p>
             <p>Created on: <%=post.createdAt%></p>
             <div class='like-container'>

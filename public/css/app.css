@@ -1,19 +1,22 @@
 /* Add your styles here. */
-
 @import "create_user.css";
 @import "create_post.css";
 @import "post_list.css";
+@import "user_detail.css";
+
+.post-list {
+    justify-content: center;
+    width: 100%;
+    background-color: #252A38;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+}
 
 h1 {
     color: #008080;
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 400px) {
-    h1 {
-        font-size: 20px;
-    }
-}
 
 nav {
     background-color: #204760;
@@ -25,191 +28,16 @@ a:visited {
     color: white;
 }
 
-/* 
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: small;
-    }
-}
-
-h1 {
-    color: green;
-    text-decoration: underline;
-}
-
-
 
 @media only screen and (max-width: 600px) {
     h1 {
-        font-size: small;
+        font-size: 30px;
     }
 }
-
-h1 {
-    color: green;
-    text-decoration: underline;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: small;
-    }
-}
-
-h1 {
-    color: green;
-    text-decoration: underline;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: small;
-    }
-}
-
-h1 {
-    color: green;
-    text-decoration: underline;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: small;
-    }
-}
-
-h1 {
-    color: green;
-    text-decoration: underline;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: small;
-    }
-}
-
-h1 {
-    color: green;
-    text-decoration: underline;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: small;
-    }
-}
-
-h1 {
-    color: green;
-    text-decoration: underline;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: small;
-    }
-}
-
-h1 {
-    color: green;
-    text-decoration: underline;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: small;
-    }
-}
-
-h1 {
-    color: green;
-    text-decoration: underline;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: small;
-    }
-}
-
-h1 {
-    color: green;
-    text-decoration: underline;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: small;
-    }
-}
-
-h1 {
-    color: green;
-    text-decoration: underline;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: small;
-    }
-}
-
-h1 {
-    color: green;
-    text-decoration: underline;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: small;
-    }
-}
-
-h1 {
-    color: green;
-    text-decoration: underline;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: small;
-    }
-}
-
-h1 {
-    color: green;
-    text-decoration: underline;
-}
-
-
 
 @media only screen and (max-width: 400px) {
     h1 {
-        font-size: small;
+        font-size: 20px;
     }
-} */
+}
+

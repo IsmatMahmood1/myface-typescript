@@ -1,8 +1,77 @@
 <html lang="en-gb">
 <%- include('_head') -%>
-<%- include('_header') -%>
-<body>
-<h1><%= name %></h1>
-</body>
-<%- include('_footer') -%>
+
+    <body class="userDetails">
+        <div class="profile">
+            <div class='header-user-detail'>
+                <%- include('_header') -%>
+            </div>
+
+            <img class='cover-image' src="<%= coverImageUrl %>">
+            <div class="profile-container">
+                <img class='profile-image' src="<%= profileImageUrl %>">
+                <h1 class='name'>
+                    <%= name %>
+                </h1>
+                <p class='email'><%= email %></p>
+                <p class='username'><%= username %></p>
+
+            </div>
+        </div>
+        <div class="userPosts">
+            <h2 class='user-posts'>
+                <%= name %>'s Posts
+            </h2>
+            <ol>
+                <% posts.forEach(function(post) {%>
+                    <li>
+                        <img class='list-image' src="<%= post.imageUrl%>" alt="<%=post.message%>">
+                        <p>Posted by: <%=username%>
+                        </p>
+                        <p>Created on: <%=post.createdAt%>
+                        </p>
+                        <p>
+                            <%= post.message%>
+                        </p>
+                    </li>
+                    <% }); %>
+            </ol>
+        </div>
+        <div class="userLikes">
+            <h2>Posts <%= name %> Liked</h2>
+            <ol>
+                <% likes.forEach(function(post) {%>
+                    <li>
+                        <img class='list-image' src="<%= post.imageUrl%>" alt="<%=post.message%>">
+                        <p>Posted by: <%=username%>
+                        </p>
+                        <p>Created on: <%=post.createdAt%>
+                        </p>
+                        <p>
+                            <%= post.message%>
+                        </p>
+                    </li>
+                    <% }); %>
+            </ol>
+        </div>
+        <div class="userDislikes">
+            <h2>Posts <%= name %> Disliked</h2>
+            <ol>
+                <% dislikes.forEach(function(post) {%>
+                    <li>
+                        <img class='list-image' src="<%= post.imageUrl%>" alt="<%=post.message%>">
+                        <p>Posted by: <%=username%>
+                        </p>
+                        <p>Created on: <%=post.createdAt%>
+                        </p>
+                        <p>
+                            <%= post.message%>
+                        </p>
+                    </li>
+                    <% }); %>
+            </ol>
+        </div>
+        <%- include('_footer') -%>
+    </body>
+
 </html>

@@ -1,0 +1,96 @@
+.userDetails {
+    justify-content: center;
+    width: 100%;
+    background-color: #252A38;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+.profile{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    display: block;
+    position: relative;
+    padding-bottom: 45%;
+} 
+
+.header-user-detail {
+    padding-left: 5px;
+}
+
+.cover-image{
+    width:100%;
+    display:block;
+    width: 100%;
+    display:block;
+    z-index: -1;
+}
+
+.profile-container {
+    position:absolute;  
+    top: 40%;
+    left: 5%;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 50% 50%;
+    width: 80%;
+    color: #DCDCDC;
+}
+
+.profile-image{
+    border-radius: 100%;
+    border: white thick solid;
+    width: 80%; 
+    z-index: 1; 
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end:3 ;
+}
+
+.name {
+    color: #DCDCDC;
+    background-color: #252A38 ;
+    opacity: 0.56;
+    z-index: 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end:2 ;
+    text-align: left;
+}
+.username{
+    font-size: small;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end:3 ;
+
+}
+.email{
+    padding-top: 5%;
+    font-size: smaller;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end:3 ;
+}
+.user-posts {
+    font-size: medium;
+    text-align: left;
+    padding-left: 5%;
+    color: #DCDCDC;
+}
+.userLikes {
+    font-size: medium;
+    text-align: left;
+    padding-left: 5%;
+    color: #DCDCDC;
+} 
+.userDislikes{
+    font-size: medium;
+    text-align: left;
+    padding-left: 5%;
+    color: #DCDCDC;
+} 
