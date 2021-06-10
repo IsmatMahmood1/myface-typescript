@@ -2,10 +2,11 @@
 <%- include('_head') -%>
 <body class="post-list">
     <div class='header-post-list'><%- include('_header') -%></div>
+<div id="main">
 <h1>Posts</h1>
 <ol>
     <% results.forEach(function(post) {%>
-        <li>
+        <li class="list-items">
             <h2><%= post.message%></h2> 
             <img class='list-image' src="<%= post.imageUrl%>" alt="<%=post.message%>">
             <p>Posted by: <%=post.postedBy.name%></p>
@@ -23,6 +24,7 @@
         </li>
     <% }); %>
 </ol>
+<div class='color-container'><button id = 'random-color' class='button' type="button">Disco Colours</button></div>
 <div class='footer'>
 <%if (next) { %>
     <a  class='button' href="<%= next %>">Next</a>
@@ -31,7 +33,7 @@
     <a class='button' href="<%= previous %>">Previous</a>
 <% } %>
 <%- include('_footer') -%>
-
+</div>
 </div>
 </body>
 </html>

@@ -1,7 +1,9 @@
 <html lang="en-gb">
 <%- include('_head') -%>
-<%- include('_header') -%>
+
 <body>
+    <%- include('_header') -%>
+    <div id='main'>
 <h1>Create Post</h1>
 <form method="post" action="/posts/create">
     <label class="formLabel">
@@ -14,6 +16,7 @@
     </label>
     <button type="submit">Submit</button>
 </form>
-</body>
+</div>
 <%- include('_footer') -%>
+</body>
 </html>

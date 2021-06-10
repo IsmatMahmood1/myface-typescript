@@ -4,7 +4,7 @@
 @import "post_list.css";
 @import "user_detail.css";
 
-.post-list {
+body {
     justify-content: center;
     width: 100%;
     background-color: #252A38;
@@ -12,20 +12,33 @@
     margin: 0;
 }
 
+
 h1 {
-    color: #008080;
+    color: #DCDCDC;
     text-decoration: underline;
 }
 
 
-nav {
-    background-color: #204760;
+.nav-bar {
     color: white;
     padding: 20px 0 20px 0;
+
 }
 
 a:visited {
     color: white;
+}
+
+.burger {
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    background-color: #DCDCDC;
+    border-radius: 2.5px;
+   }
+
+.nav-button {
+    display: none;
 }
 
 
@@ -33,11 +46,33 @@ a:visited {
     h1 {
         font-size: 30px;
     }
+
+    .nav-bar {
+        display:none;
+    }
+
+    .nav-button {
+        display: block;
+        border: none;
+        float: right;
+        background: rgba(255, 255, 255, 0.01) ;
+    }
+
+    .nav-bar.show {
+        display:block;
+        background-color:#151820;
+        display: flex;
+        flex-direction: column;
+        float: right;
+    }
+
 }
 
 @media only screen and (max-width: 400px) {
     h1 {
         font-size: 20px;
-    }
+        
+    } 
+    
 }
 
